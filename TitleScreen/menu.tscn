@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://doyj1ckqaifax"]
+
+[ext_resource type="Script" path="res://TitleScreen/menu.gd" id="1_cwtjw"]
+[ext_resource type="FontFile" uid="uid://bmig6pfxgymgt" path="res://Font/tenderness.otf" id="1_x4hy8"]
+[ext_resource type="PackedScene" uid="uid://dxa4hqlrime4h" path="res://Utility/basic_button.tscn" id="2_8l8in"]
+[ext_resource type="Texture2D" uid="uid://b3l3n45ov00t0" path="res://Levels/main.png" id="3_7dv2p"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cwtjw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 683.0
+offset_bottom = 413.0
+color = Color(0.321569, 0.172549, 0.172549, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 640.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("1_x4hy8")
+theme_override_font_sizes/font_size = 72
+text = "Survivors Clone #13247"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main" type="Sprite2D" parent="."]
+position = Vector2(333, 214)
+scale = Vector2(1.12698, 0.864)
+texture = ExtResource("3_7dv2p")
+
+[node name="btn_play" parent="." instance=ExtResource("2_8l8in")]
+offset_left = 65.0
+offset_top = 304.0
+offset_right = 145.0
+offset_bottom = 334.0
+text = "Play"
+
+[node name="btn_exit" parent="." instance=ExtResource("2_8l8in")]
+offset_left = 526.0
+offset_top = 301.0
+offset_right = 606.0
+offset_bottom = 331.0
+text = "Exit"
+
+[connection signal="click_end" from="btn_play" to="." method="_on_btn_play_click_end"]
+[connection signal="click_end" from="btn_exit" to="." method="_on_btn_exit_click_end"]

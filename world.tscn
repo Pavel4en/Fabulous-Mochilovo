@@ -1,0 +1,125 @@
+[gd_scene load_steps=12 format=3 uid="uid://b6ya2f55u2itk"]
+
+[ext_resource type="PackedScene" path="res://christmas_tree.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://dqcemhu0swtnu" path="res://Assets/Env/ground/DirtTileset.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://frec4wjebh74" path="res://Assets/Env/swamp/swamp_2.png" id="4"]
+[ext_resource type="PackedScene" path="res://swamp.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://r8m0du8vrm0n" path="res://Assets/Env/ground/cliffTileset.png" id="6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s6pm4"]
+texture = ExtResource("3")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oarqd"]
+texture = ExtResource("3")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2rv7s"]
+texture = ExtResource("3")
+
+[sub_resource type="TileSet" id="1"]
+sources/0 = SubResource("TileSetAtlasSource_s6pm4")
+sources/1 = SubResource("TileSetAtlasSource_oarqd")
+sources/2 = SubResource("TileSetAtlasSource_2rv7s")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u7h7p"]
+texture = ExtResource("6")
+
+[sub_resource type="TileSet" id="50"]
+sources/0 = SubResource("TileSetAtlasSource_u7h7p")
+
+[node name="world" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-1936, -1312)
+scale = Vector2(1.66667, 1.57813)
+texture = ExtResource("4")
+centered = false
+region_enabled = true
+region_rect = Rect2(-1024, -896, 2304, 1664)
+
+[node name="dirt" type="TileMap" parent="."]
+tile_set = SubResource("1")
+format = 2
+
+[node name="cliff" type="TileMap" parent="."]
+tile_set = SubResource("50")
+format = 2
+
+[node name="YSort" type="Node2D" parent="."]
+
+[node name="bush" parent="YSort" instance=ExtResource("2")]
+position = Vector2(-134, 65)
+
+[node name="swamp3" parent="YSort" instance=ExtResource("5")]
+position = Vector2(208, 264)
+
+[node name="swamp4" parent="YSort" instance=ExtResource("5")]
+position = Vector2(-240, 96)
+
+[node name="tree" parent="YSort" instance=ExtResource("2")]
+position = Vector2(-960, -376)
+
+[node name="tree2" parent="YSort" instance=ExtResource("2")]
+position = Vector2(-312, -496)
+
+[node name="tree3" parent="YSort" instance=ExtResource("2")]
+position = Vector2(-880, 608)
+
+[node name="tree4" parent="YSort" instance=ExtResource("2")]
+position = Vector2(-304, 464)
+
+[node name="tree5" parent="YSort" instance=ExtResource("2")]
+position = Vector2(144, 624)
+
+[node name="tree6" parent="YSort" instance=ExtResource("2")]
+position = Vector2(776, 712)
+
+[node name="tree7" parent="YSort" instance=ExtResource("2")]
+position = Vector2(776, -152)
+
+[node name="tree8" parent="YSort" instance=ExtResource("2")]
+position = Vector2(928, -528)
+
+[node name="tree9" parent="YSort" instance=ExtResource("2")]
+position = Vector2(1312, -272)
+
+[node name="tree10" parent="YSort" instance=ExtResource("2")]
+position = Vector2(1200, 408)
+
+[node name="tree11" parent="YSort" instance=ExtResource("2")]
+position = Vector2(-1728, -216)
+
+[node name="tree12" parent="YSort" instance=ExtResource("2")]
+position = Vector2(-1440, -1032)
+
+[node name="tree13" parent="YSort" instance=ExtResource("2")]
+position = Vector2(232, -1016)
+
+[node name="tree14" parent="YSort" instance=ExtResource("2")]
+position = Vector2(-1656, 600)
+
+[node name="tree15" parent="YSort" instance=ExtResource("2")]
+position = Vector2(-1288, 1112)
+
+[node name="tree16" parent="YSort" instance=ExtResource("2")]
+position = Vector2(1552, -1120)
+
+[node name="swamp" parent="YSort" instance=ExtResource("5")]
+position = Vector2(-1464, -176)
+
+[node name="swamp2" parent="YSort" instance=ExtResource("5")]
+position = Vector2(-960, 1024)
+
+[node name="swamp5" parent="YSort" instance=ExtResource("5")]
+position = Vector2(1152, -424)
+
+[node name="swamp6" parent="YSort" instance=ExtResource("5")]
+position = Vector2(-432, -1032)
+
+[node name="swamp7" parent="YSort" instance=ExtResource("5")]
+position = Vector2(1176, -1016)
+
+[node name="swamp8" parent="YSort" instance=ExtResource("5")]
+position = Vector2(880, 1016)
+
+[node name="swamp9" parent="YSort" instance=ExtResource("5")]
+position = Vector2(1584, 352)

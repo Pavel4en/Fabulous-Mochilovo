@@ -1,0 +1,88 @@
+[gd_scene load_steps=42 format=3 uid="uid://cnounq16bbed0"]
+
+[ext_resource type="Texture2D" uid="uid://crc657hfouryy" path="res://Assets/Heroes/water_spirit/walk/water_spirit1.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bjvesbk0hd6p3" path="res://Assets/Heroes/water_spirit/walk/water_spirit2.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bm1t8o51rix4b" path="res://Assets/Heroes/water_spirit/walk/water_spirit9.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://1d6aur63k2f7" path="res://Assets/Heroes/water_spirit/walk/water_spirit10.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cuwf3521sgja6" path="res://Assets/Heroes/water_spirit/walk/water_spirit3.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://youu6omyfsm8" path="res://Assets/Heroes/water_spirit/walk/water_spirit11.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bb6q8t5wqehr7" path="res://Assets/Heroes/water_spirit/walk/water_spirit6.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dttshn7yvhrcb" path="res://Assets/Heroes/water_spirit/walk/water_spirit4.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bsw4hduqbmndl" path="res://Assets/Heroes/water_spirit/walk/water_spirit5.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://c7xpvgdlyj7w6" path="res://Assets/Heroes/water_spirit/walk/water_spirit8.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://caw0wldc3p220" path="res://Assets/Heroes/water_spirit/walk/water_spirit13.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dtoyvlt6ugrvs" path="res://Assets/Heroes/water_spirit/walk/water_spirit14.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://n5s03i1vnbrb" path="res://Assets/Heroes/water_spirit/walk/water_spirit7.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://ctycf3chq0b06" path="res://Assets/Heroes/water_spirit/walk/water_spirit12.png" id="14"]
+[ext_resource type="Script" path="res://Player.gd" id="15"]
+[ext_resource type="Texture2D" uid="uid://b201ggy7yc3v0" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack4.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://btwxo6hgq2pta" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack3.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://gjdhj56jfs52" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack2.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://cgq3grvcqab1e" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack7.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://c0aknucojnhap" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack8.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://cwsypdsx8on0q" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack1.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://bhjq2yu7r47rn" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack5.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://bib6eoonh44ka" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack6.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://cnsasananbbkt" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack9.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://ulc2bpc6844t" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack10.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://dsphc1f8qwo6h" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack11.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://mdsa66fkyurt" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack12.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://bxa6iqt0sj3fc" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack13.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://mg0fmlqns3pb" path="res://Assets/Heroes/water_spirit/attack/water_spirit_attack14.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://brcjohxm7q6c0" path="res://Assets/Heroes/water_spirit/dodge/space3.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://bg7h8nkty8d06" path="res://Assets/Heroes/water_spirit/dodge/space4.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://c8448ddyy1ev5" path="res://Assets/Heroes/water_spirit/dodge/space5.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://cqs7b48pjljo1" path="res://Assets/Heroes/water_spirit/dodge/space6.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://by3bl1qmkfqwi" path="res://Assets/Heroes/water_spirit/dodge/space2.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://cbg10toihhei8" path="res://Assets/Heroes/water_spirit/dodge/space7.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://74lusrsi0jmc" path="res://Assets/Heroes/water_spirit/dodge/space8.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://dpiewtsy75udu" path="res://Assets/Heroes/water_spirit/dodge/space9.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://dkx18apoave3y" path="res://Assets/Heroes/water_spirit/dodge/space1.png" id="38"]
+[ext_resource type="Texture2D" uid="uid://jl4rjlmrf1w6" path="res://Assets/Heroes/water_spirit/dodge/space10.png" id="39"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [ExtResource("39"), ExtResource("37"), ExtResource("36"), ExtResource("35"), ExtResource("33"), ExtResource("32"), ExtResource("31"), ExtResource("30"), ExtResource("34"), ExtResource("38")],
+"loop": false,
+"name": &"appear",
+"speed": 30.0
+}, {
+"frames": [ExtResource("21"), ExtResource("18"), ExtResource("17"), ExtResource("16"), ExtResource("22"), ExtResource("23"), ExtResource("19"), ExtResource("20"), ExtResource("24"), ExtResource("25"), ExtResource("26"), ExtResource("27"), ExtResource("28"), ExtResource("29")],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [ExtResource("34"), ExtResource("38"), ExtResource("30"), ExtResource("31"), ExtResource("32"), ExtResource("33"), ExtResource("35"), ExtResource("36"), ExtResource("37"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("39"), ExtResource("37"), ExtResource("36"), ExtResource("35"), ExtResource("33"), ExtResource("32"), ExtResource("31"), ExtResource("30"), ExtResource("34"), ExtResource("38")],
+"loop": false,
+"name": &"dodge",
+"speed": 30.0
+}, {
+"frames": [ExtResource("1"), ExtResource("2"), ExtResource("5"), ExtResource("8"), ExtResource("9"), ExtResource("7"), ExtResource("13"), ExtResource("10"), ExtResource("3"), ExtResource("4"), ExtResource("6"), ExtResource("14"), ExtResource("11"), ExtResource("12")],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="2"]
+radius = 17.0
+height = 34.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("15")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(14, -5)
+scale = Vector2(1.4, 1.41429)
+frames = SubResource("1")
+animation = &"appear"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 14)
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

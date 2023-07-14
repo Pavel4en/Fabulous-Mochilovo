@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://cksnbt5cwlkfd"]
+
+[ext_resource type="Texture2D" uid="uid://b3aqaobv7d7kl" path="res://Enemies/blood.png" id="1_6tc6y"]
+[ext_resource type="Script" path="res://Enemies/explosion.gd" id="2_81m5v"]
+[ext_resource type="AudioStream" uid="uid://i5de5einjb1j" path="res://meal.wav" id="3_4d7bd"]
+
+[sub_resource type="Animation" id="Animation_x7pp5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ytdxo"]
+resource_name = "explode"
+length = 0.34
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.32),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_exhc0"]
+_data = {
+"RESET": SubResource("Animation_x7pp5"),
+"explode": SubResource("Animation_ytdxo")
+}
+
+[node name="Explosion" type="Sprite2D"]
+z_index = 1
+position = Vector2(0.999999, -1)
+scale = Vector2(0.952381, 0.952381)
+texture = ExtResource("1_6tc6y")
+hframes = 3
+vframes = 3
+frame = 2
+script = ExtResource("2_81m5v")
+
+[node name="snd_explosion" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1.6579, -24.1633)
+stream = ExtResource("3_4d7bd")
+pitch_scale = 0.5
+autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_exhc0")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
